@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/*----------------------------------------
+	reset
+----------------------------------------*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+article,
+section,
+aside,
+main,
+nav,
+menu,
+figure,
+figcaption {
+  display: block;
+}
+
+span,
+small,
+strong,
+em,
+b,
+i {
+  color: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+q::before,
+q::after {
+  display: none;
+}
+
+/*----------------------------------------
+	base
+----------------------------------------*/
+body {
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+a {
+  color: #37952f;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #70cc33;
+  text-decoration: none;
+}
+
+/*----------------------------------------
+	header
+----------------------------------------*/
+
+.header {
+  height: 100px;
+  padding: 0 18px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px), print {
+}
+
+/*----------------------------------------
+	hamburger
+----------------------------------------*/
+.hamburger {
+  display: none;
+}
+
+@media screen and (min-width: 768px), print {
+}
+
+/*----------------------------------------
+	gnav
+----------------------------------------*/
+.gnav__list {
+  display: flex;
+}
+
+.gnav__item + .gnav__item {
+  margin-left: 36px;
+}
+
+.gnav__link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.gnav__link:hover {
+  color: #37952f;
+}
+
+.gnav__link._current {
+  border-bottom: 4px solid #37952f;
+}
+
+@media screen and (min-width: 768px), print {
+}
+
+/*----------------------------------------
+	mainContents
+----------------------------------------*/
+
+.mainVisual {
+  background-color: #37952f;
+}
+
+.mainVisual__inner {
+  max-width: 1084px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainVisual__catch {
+  padding: 0 calc((100% - 900px) / 2);
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+}
+
+/*----------------------------------------
+	footer
+----------------------------------------*/
+
+/*----------------------------------------
+	container
+----------------------------------------*/
+
+/*----------------------------------------
+	section
+----------------------------------------*/
+
+/*----------------------------------------
+	heading
+----------------------------------------*/
+
+/*----------------------------------------
+	button
+----------------------------------------*/
