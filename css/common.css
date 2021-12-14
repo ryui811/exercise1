@@ -249,35 +249,6 @@ a:hover {
   padding-top: 100px;
 }
 
-.mainVisual {
-  background-color: #37952f;
-  padding: 40px 0;
-}
-
-.mainVisual__inner {
-  max-width: 1084px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.mainVisual__catch {
-  font-weight: bold;
-  font-size: 36px;
-  color: #fff;
-  line-height: 2;
-  margin-top: 20px;
-  padding: 0 8.5%;
-}
-
-.mainVisual__image {
-  width: 40%;
-  flex-shrink: 0;
-}
-
 @media screen and (min-width: 768px), print {
 }
 
@@ -288,15 +259,65 @@ a:hover {
 /*----------------------------------------
 	container
 ----------------------------------------*/
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px), print {
+}
 
 /*----------------------------------------
 	section
 ----------------------------------------*/
+.section {
+  padding-top: 80px;
+}
+
+@media screen and (min-width: 768px), print {
+}
 
 /*----------------------------------------
 	heading
 ----------------------------------------*/
+.headingL {
+  font-family: Oswald;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 9.6px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px), print {
+}
 
 /*----------------------------------------
 	button
 ----------------------------------------*/
+.serviceList__btn {
+  background: #37952f;
+  text-align: center;
+  margin: auto 20px 20px;
+}
+
+.buttonM {
+  /* aタグの方に指定することで親要素いっぱいに広がる */
+  /* 今回は横並びいらないのでblock */
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  border: solid 2px #37952f;
+  padding: 16px 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonM:hover {
+  color: #37952f;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px), print {
+}
