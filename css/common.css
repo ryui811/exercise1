@@ -319,5 +319,27 @@ a:hover {
   background-color: #fff;
 }
 
+.centerButton {
+  max-width: 400px;
+  text-align: center;
+  margin: 40px auto 0;
+}
+
+.buttonL {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  border: solid 2px #37952f;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonL:hover {
+  color: #fff;
+  background-color: #37952f;
+}
+
 @media screen and (min-width: 768px), print {
 }
