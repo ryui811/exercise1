@@ -75,10 +75,11 @@
 .pickupList {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pickupList__item {
-  width: 23.61%;
+  width: calc((100% - 60px) / 4);
 }
 
 .pickupList__item a {
@@ -94,6 +95,7 @@
   font-weight: bold;
   color: #333;
   line-height: 1.67;
+  transition: color 0.3s;
 }
 
 .pickupList__title::before {
@@ -101,5 +103,20 @@
   padding-right: 6px;
 }
 
+/* 親要素にhoverした時子要素に対するCSS */
+.pickupList__item a:hover .pickupList__title {
+  color: #37952f;
+}
+
+.pickupList__title:hover {
+  color: #37952f;
+}
+
+@media screen and (min-width: 992px), print {
+}
+
 @media screen and (min-width: 768px), print {
+  /* .pickupList__item {
+    width: calc((100% - 40px) / 3);
+  } */
 }
