@@ -8,34 +8,55 @@
 ----------------------------------------*/
 .mainVisual {
   background-color: #37952f;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .mainVisual__inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* 指定があるまでは逆から縦並び */
+  flex-direction: column-reverse;
   max-width: 1084px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .mainVisual__catch {
-  font-weight: bold;
-  font-size: 36px;
   color: #fff;
+  font-weight: bold;
+  /* （最小値、推奨値、最大値）で設定できるclamp関数 */
+  /* ここでは最小20pxスタート、3.3vwで可変、最大36pxでストップ */
+  font-size: clamp(20px, 3.3vw, 36px);
   line-height: 2;
   margin-top: 20px;
-  padding: 0 8.5%;
 }
 
 .mainVisual__image {
-  width: 40%;
+  width: 100%;
   flex-shrink: 0;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px), print {
+  .mainVisual {
+    padding: 40px 0;
+  }
+
+  .mainVisual__inner {
+    /* 横並びにする */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .mainVisual__catch {
+    padding: 0 8.5%;
+  }
+
+  .mainVisual__image {
+    width: 40%;
+  }
 }
 
 /* serviceList
