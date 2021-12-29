@@ -456,7 +456,7 @@ a:hover {
 .centerButton {
   max-width: 400px;
   text-align: center;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
 }
 
 .buttonL {
@@ -476,4 +476,7 @@ a:hover {
 }
 
 @media screen and (min-width: 768px), print {
+  .centerButton {
+    margin: 40px auto 0;
+  }
 }

@@ -124,12 +124,16 @@
 
 .pickupList {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  /* 子要素にマージンつけたままだと余計な余白がでるため親要素にマイナスつけて引っ張り上げるイメージ */
+  margin-top: -20px;
 }
 
+/* 指定がないときは100％から隣接する余白20pxを除いたものを2等分 */
 .pickupList__item {
-  width: calc((100% - 60px) / 4);
+  width: calc((100% - 20px) / 2);
+  margin-top: 20px;
 }
 
 .pickupList__item a {
@@ -137,11 +141,13 @@
 }
 
 .pickupList__thumb {
-  padding-bottom: 20px;
+  max-width: none;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 .pickupList__title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: #333;
   line-height: 1.67;
@@ -162,11 +168,46 @@
   color: #37952f;
 }
 
-@media screen and (min-width: 992px), print {
-}
-
+/* 上書きしたい順に書く */
+/* 今回は768→992の順で上書きされるように記述 */
 @media screen and (min-width: 768px), print {
-  /* .pickupList__item {
+  /* 768px以上は100％から隣接する余白20px2つ分を除いたものを3等分 */
+  .pickupList__item {
     width: calc((100% - 40px) / 3);
-  } */
+  }
+
+  /* 親要素の末尾に追加することでアイテムが少ないとき両端に行っちゃうのを防ぐ */
+  .pickupList::after {
+    content: "";
+    display: block;
+    width: calc((100% - 40px) / 3);
+  }
+
+  .pickupList__title {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 992px), print {
+    /* 992px以上は100％から隣接する余白20px3つ分を除いたものを4等分 */
+    .pickupList__item {
+      width: calc((100% - 60px) / 4);
+    }
+
+    /* 親要素の末尾に追加することでアイテムが少ないとき両端に行っちゃうのを防ぐ */
+    .pickupList::before,
+    .pickupList::after {
+      content: "";
+      display: block;
+      width: calc((100% - 60px) / 4);
+    }
+
+    /* 表示される場所（順序）を変更 */
+    .pickupList::before {
+      order: 1;
+    }
+
+    .pickupList__thumb {
+      padding-bottom: 20px;
+    }
+  }
 }
