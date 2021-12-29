@@ -63,14 +63,24 @@
 ----------------------------------------*/
 .serviceList {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .serviceList__item {
-  width: 32.22%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.serviceList__item + .serviceList__item {
+  margin-top: 20px;
+}
+
+.serviceList__thumb img {
+  max-width: none;
+  width: 100%;
 }
 
 .serviceList__data {
@@ -88,6 +98,25 @@
 }
 
 @media screen and (min-width: 768px), print {
+  .serviceList {
+    flex-direction: row;
+    justify-content: space-between;
+    /* 初期値はnormal */
+    align-items: normal;
+  }
+
+  .serviceList__item {
+    width: 32.22%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .serviceList__item + .serviceList__item {
+    margin-top: 0;
+  }
+
+  .serviceList__thumb img {
+    max-width: 100%;
+  }
 }
 
 /* pickupList

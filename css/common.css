@@ -386,7 +386,8 @@ a:hover {
 	container
 ----------------------------------------*/
 .container {
-  max-width: 1080px;
+  max-width: 1120px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -398,10 +399,13 @@ a:hover {
 	section
 ----------------------------------------*/
 .section {
-  padding-top: 80px;
+  padding-top: 50px;
 }
 
 @media screen and (min-width: 768px), print {
+  .section {
+    padding-top: 80px;
+  }
 }
 
 /*----------------------------------------
@@ -409,15 +413,19 @@ a:hover {
 ----------------------------------------*/
 .headingL {
   font-family: Oswald;
-  font-size: 48px;
+  font-size: 28px;
+  margin-bottom: 20px;
   font-weight: normal;
   line-height: 1.5;
   letter-spacing: 9.6px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px), print {
+  .headingL {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
 }
 
 /*----------------------------------------
