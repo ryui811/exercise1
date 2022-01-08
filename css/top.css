@@ -147,16 +147,20 @@
 }
 
 .pickupList__title {
+  position: relative;
   font-size: 14px;
   font-weight: bold;
   color: #333;
   line-height: 1.67;
   transition: color 0.3s;
+  padding-left: 1.2em;
 }
 
 .pickupList__title::before {
   content: "＞";
-  padding-right: 6px;
+  display: block;
+  position: absolute;
+  left: 0;
 }
 
 /* 親要素にhoverした時子要素に対するCSS */
